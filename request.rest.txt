@@ -1,4 +1,4 @@
-Create a Post
+### Create a Post
 POST http://localhost:3000/post
 Content-Type: application/json
 
@@ -8,16 +8,16 @@ Content-Type: application/json
   "sender": "Moshe"
 }
 
-Get All Posts
+### Get All Posts
 GET http://localhost:3000/post
 
-Get Posts by Sender
+### Get Posts by Sender
 GET http://localhost:3000/post?sender=JohnDoe
 
-Get a Post by ID
+### Get a Post by ID
 GET http://localhost:3000/post/60c72b2f4f1c4c3a5d2e1a8e
 
-Update a Post
+### Update a Post
 PUT http://localhost:3000/post/60c72b2f4f1c4c3a5d2e1a8e
 Content-Type: application/json
 
@@ -26,11 +26,11 @@ Content-Type: application/json
   "content": "Vacation"
 }
 
-Delete a Post
+### Delete a Post
 DELETE http://localhost:3000/post/60c72b2f4f1c4c3a5d2e1a8e
 
 
-Add a Comment
+### Add a Comment
 POST http://localhost:3000/comment
 Content-Type: application/json
 
@@ -40,13 +40,13 @@ Content-Type: application/json
   "sender": "JaneDoe"
 }
 
-Get All Comments
+### Get All Comments
 GET http://localhost:3000/comment
 
-Get Comments by Post ID
+### Get Comments by Post ID
 GET http://localhost:3000/comment/60c72b2f4f1c4c3a5d2e1a8e
 
-Update a Comment
+### Update a Comment
 PUT http://localhost:3000/comment/60c72b2f4f1c4c3a5d2e1a8f
 Content-Type: application/json
 
@@ -54,5 +54,5 @@ Content-Type: application/json
   "content": "Updated comment content!"
 }
 
-Delete a Comment
+### Delete a Comment
 DELETE http://localhost:3000/comment/60c72b2f4f1c4c3a5d2e1a8f
