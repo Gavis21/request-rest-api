@@ -1,11 +1,14 @@
-const http = require('http');
+require('dotenv').config(); // Load environment variables
+const express = require('express');
+const db = require('./src/config/db'); // MongoDB connection
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
-});
+app.use(express.json());
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000/');
+const router = require('./src/routes');
+app.use(router);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
